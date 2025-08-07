@@ -8,7 +8,7 @@ class Account:
     def __init__(self, id: str, amount: int) -> None:
         self._id : str = id
         self._balance : int = amount
-        self._lock : threading.Lock = threading.RLock()
+        self._lock : threading.RLock = threading.RLock()
 
     def deposit(self, amount: int) -> None:
         if amount < 0:
